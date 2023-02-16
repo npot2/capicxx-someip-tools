@@ -32,59 +32,6 @@
                         </goals>
                         <configuration>
                             <target>
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/commonapi-someip-generator.exe" />
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/eclipsec.exe"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/commonapi-someip-generator-windows-x86.exe" />
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/commonapi-someip-generator.ini"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/commonapi-someip-generator-windows-x86.ini" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/eclipsec.exe" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/commonapi-someip-generator.ini" />
-                                <copy
-                                    todir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/">
-                                    <fileset
-                                        dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86/" />
-                                </copy>
-
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/commonapi-someip-generator.exe" />
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/eclipsec.exe"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/commonapi-someip-generator-windows-x86_64.exe" />
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/commonapi-someip-generator.ini"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/commonapi-someip-generator-windows-x86_64.ini" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/eclipsec.exe" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/commonapi-someip-generator.ini" />
-                                <copy
-                                    todir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/">
-                                    <fileset
-                                        dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/win32/win32/x86_64/" />
-                                </copy>
-
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator-linux-x86" />
-                                <chmod file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator-linux-x86" perm="755" />
-                                <copy
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator.ini"
-                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator-linux-x86.ini" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator" />
-                                <delete
-                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/commonapi-someip-generator.ini" />
-                                <copy
-                                    todir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/">
-                                    <fileset
-                                        dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86/" />
-                                </copy>
-
                                 <copy
                                     file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86_64/commonapi-someip-generator"
                                     tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86_64/commonapi-someip-generator-linux-x86_64" />
@@ -102,18 +49,24 @@
                                         dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/x86_64/" />
                                 </copy>
 
-                                <!--
-                                MacOS X:
-                                The 'macosx/cocoa/x86_64/commonapi-someip-generator.app' directory should get copied to 'all/commonapi-someip-generator-macosx-x86_64.app'. This would
-                                follow the already existing naming style for Linux and Windows. But I cannot verify yet, if a MacOSX application directory can get renamed
-                                safely without also renaming the application name in some of the meta data files (e.g. Contents/Info.plist). Therefore the
-                                'commonapi-someip-generator.app' directory is copied to 'all/commonapi-someip-generator.app' directory.
-                                 -->
+				<copy
+                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator"
+                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator-linux-aarch64" />
+                                <chmod file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator-linux-aarch64" perm="755" />
                                 <copy
-                                    todir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator.app/">
+                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator.ini"
+                                    tofile="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator-linux-aarch64.ini" />
+                                <delete
+                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator" />
+                                <delete
+                                    file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/commonapi-someip-generator.ini" />
+                                <copy
+                                    todir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/">
                                     <fileset
-                                        dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/macosx/cocoa/x86_64/commonapi-someip-generator.app/" />
+                                        dir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/linux/gtk/aarch64/" />
                                 </copy>
+
+
                             </target>
                         </configuration>
                     </execution>
@@ -123,13 +76,11 @@
                         <configuration>
                             <target>
                                 <zip excludesfile="zip.excludes"
-                                    excludes="commonapi-someip-generator-linux-x86,commonapi-someip-generator-linux-x86_64,commonapi-someip-generator-windows-x86.exe,commonapi-someip-generator-windows-x86_64.exe"
+                                    excludes="commonapi-someip-generator-linux-x86_64,commonapi-someip-generator-linux-aarch64"
                                     destfile="${project.build.directory}/products/commonapi_someip_generator.zip"
                                     basedir="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all">
-                                    <zipfileset file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator-linux-x86" filemode="755"/>
                                     <zipfileset file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator-linux-x86_64" filemode="755"/>
-                                    <zipfileset file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator-windows-x86.exe" filemode="755"/>
-                                    <zipfileset file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator-windows-x86_64.exe" filemode="755"/>
+                                    <zipfileset file="${project.build.directory}/products/org.genivi.commonapi.someip.cli.product/all/commonapi-someip-generator-linux-aarch64" filemode="755"/>
                                 </zip>
                             </target>
                         </configuration>

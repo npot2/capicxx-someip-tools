@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: GENIVI CommonAPI Some/IP Validator
 Bundle-SymbolicName: org.genivi.commonapi.someip.validator;singleton:=true
 Bundle-Version: 3.2.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: BMW AG
 Require-Bundle: org.eclipse.xtext.builder;bundle-version="[2.7.0,3.0.0)";visibility:=reexport,
  org.eclipse.xtext.generator;bundle-version="[2.7.0,3.0.0)";visibility:=reexport,
